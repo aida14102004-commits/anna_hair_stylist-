@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Салон LANTANA — Парикмахер-универсал Анна</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-main: #FAF8F5;
+            --bg-secondary: #F4EFEA;
+            --accent-gold: #C5A059;
+            --accent-gold-hover: #b08d48;
+            --text-dark: #3A322B;
+            --text-muted: #7A7269;
+            --white: #FFFFFF;
+            --border-light: rgba(197, 160, 89, 0.25);
+            --shadow-soft: 0 10px 30px rgba(58, 50, 43, 0.05);
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--bg-main); color: var(--text-dark); font-family: var(--font-sans); line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        header { position: fixed; top: 0; left: 0; width: 100%; background: rgba(250, 248, 245, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid var(--border-light); padding: 15px 0; }
+        .header-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo-title { font-size: 22px; font-weight: 700; letter-spacing: 3px; color: var(--text-dark); text-transform: uppercase; }
+        .logo-sub { font-size: 10px; letter-spacing: 2px; color: var(--accent-gold); text-transform: uppercase; }
+        .nav-actions { display: flex; align-items: center; gap: 10px; }
+
+        .btn-gold { background: var(--accent-gold); color: var(--white); padding: 10px 20px; border-radius: 50px; font-size: 12px; font-weight: 500; text-transform: uppercase; border: none; cursor: pointer; }
+        .wa-header-btn { background-color: #25D366; color: #fff; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+
+        .hero { padding: 120px 0 60px; text-align: center; }
+        .hero-brand { font-size: 36px; color: var(--text-dark); text-transform: uppercase; display: block; }
+        .hero-stylist { font-size: 24px; color: var(--accent-gold); font-style: italic; display: block; margin-bottom: 15px; }
+        .hero-description { font-size: 15px; color: var(--text-muted); margin-bottom: 25px; line-height: 1.6; }
+
+        .services-section { padding: 50px 0; background-color: var(--bg-secondary); }
+        .section-title { font-size: 32px; text-align: center; margin-bottom: 30px; }
+        .service-card { background: var(--white); border-radius: 16px; margin-bottom: 20px; padding: 20px; box-shadow: var(--shadow-soft); border: 1px solid var(--border-light); }
+        .service-title { font-size: 22px; margin-bottom: 5px; }
+        .service-meta { display: flex; justify-content: space-between; color: var(--accent-gold); font-weight: 600; margin-bottom: 10px; font-size: 15px; }
+        
+        .details-accordion { display: none; background: var(--bg-main); padding: 12px; border-radius: 8px; margin-top: 10px; font-size: 13px; border-left: 3px solid var(--accent-gold); }
+        .details-accordion.active { display: block; }
+
+        .btn-wa-submit { width: 100%; background-color: #25D366; color: white; padding: 15px; border-radius: 50px; font-size: 15px; font-weight: 600; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 15px; }
+
+        footer { background: #2D2722; color: #D3C9BE; padding: 40px 20px; text-align: center; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <div>
+                <div class="logo-title">LANTANA</div>
+                <div class="logo-sub">Beauty Salon</div>
+            </div>
+            <div class="nav-actions">
+                <a href="#booking" class="btn-gold">Записаться</a>
+                <a href="https://wa.me/79409544565" target="_blank" class="wa-header-btn"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <span class="hero-brand">Салон LANTANA</span>
+            <span class="hero-stylist">Парикмахер-универсал Анна</span>
+            <p class="hero-description">Сложное окрашивание, стрижки, уход и реконструкция волос, создание элегантных вечерних и свадебных образов.</p>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">Услуги и цены</h2>
+
+            <div class="service-card">
+                <h3 class="service-title">Сложное окрашивание</h3>
+                <div class="service-meta"><span>от 3 500 ₽</span><span>от 2 часов</span></div>
+                <p style="font-size: 13px; color: var(--text-muted);">Airtouch, Шатуш, Балаяж, Мелирование, Выход из чёрного, Тонирование.</p>
+                <div class="details-accordion" id="d1">📌 Примечание: Цена и время варьируются от длины и структуры волос. Это лучше лично обговорить с мастером.</div>
+                <button onclick="document.getElementById('d1').classList.toggle('active')" style="background:none; border:none; color:var(--accent-gold); margin-top:10px; cursor:pointer;">Подробнее</button>
+            </div>
+
+            <div class="service-card">
+                <h3 class="service-title">Стрижка</h3>
+                <div class="service-meta"><span>от 1 000 ₽</span><span>от 30 минут</span></div>
+                <p style="font-size: 13px; color: var(--text-muted);">Женские и детские стрижки любой сложности.</p>
+                <div class="details-accordion" id="d2">📌 Примечание: Цена и время варьируются от длины и структуры волос. Это лучше лично обговорить с мастером.</div>
+                <button onclick="document.getElementById('d2').classList.toggle('active')" style="background:none; border:none; color:var(--accent-gold); margin-top:10px; cursor:pointer;">Подробнее</button>
+            </div>
+
+            <div class="service-card">
+                <h3 class="service-title">Уход</h3>
+                <div class="service-meta"><span>от 1 000 ₽</span><span>от 30 минут</span></div>
+                <p style="font-size: 13px; color: var(--text-muted);">Глубокое восстановление и увлажнение волос.</p>
+                <div class="details-accordion" id="d3">📌 Примечание: Цена и время варьируются от длины и структуры волос. Это лучше лично обговорить с мастером.</div>
+                <button onclick="document.getElementById('d3').classList.toggle('active')" style="background:none; border:none; color:var(--accent-gold); margin-top:10px; cursor:pointer;">Подробнее</button>
+            </div>
+
+            <div class="service-card">
+                <h3 class="service-title">Кератин</h3>
+                <div class="service-meta"><span>от 4 000 ₽</span><span>от 3 часов</span></div>
+                <p style="font-size: 13px; color: var(--text-muted);">Длительное выпрямление и зеркальный блеск.</p>
+                <div class="details-accordion" id="d4">📌 Примечание: Цена и время варьируются от длины и структуры волос. Это лучше лично обговорить с мастером.</div>
+                <button onclick="document.getElementById('d4').classList.toggle('active')" style="background:none; border:none; color:var(--accent-gold); margin-top:10px; cursor:pointer;">Подробнее</button>
+            </div>
+
+            <div class="service-card">
+                <h3 class="service-title">Ботокс</h3>
+                <div class="service-meta"><span>от 3 000 ₽</span><span>от 2,5 часов</span></div>
+                <p style="font-size: 13px; color: var(--text-muted);">Реконструкция и уплотнение структуры волос.</p>
+                <div class="details-accordion" id="d5">📌 Примечание: Цена и время варьируются от длины и структуры волос. Это лучше лично обговорить с мастером.</div>
+                <button onclick="document.getElementById('d5').classList.toggle('active')" style="background:none; border:none; color:var(--accent-gold); margin-top:10px; cursor:pointer;">Подробнее</button>
+            </div>
+
+            <div class="service-card">
+                <h3 class="service-title">Причёска</h3>
+                <div class="service-meta"><span>от 1 500 ₽</span><span>от 1 часа</span></div>
+                <p style="font-size: 13px; color: var(--text-muted);">Свадебные и вечерние причёски любой сложности.</p>
+                <div class="details-accordion" id="d6">📌 Примечание: Цена и время варьируются от длины и структуры волос. Это лучше лично обговорить с мастером.</div>
+                <button onclick="document.getElementById('d6').classList.toggle('active')" style="background:none; border:none; color:var(--accent-gold); margin-top:10px; cursor:pointer;">Подробнее</button>
+            </div>
+
+            <div class="service-card">
+                <h3 class="service-title">Укладка</h3>
+                <div class="service-meta"><span>от 600 ₽</span><span>от 20 минут</span></div>
+                <p style="font-size: 13px; color: var(--text-muted);">Локоны, объемные укладки на брашинг.</p>
+                <div class="details-accordion" id="d7">📌 Примечание: Цена и время варьируются от длины и структуры волос. Это лучше лично обговорить с мастером.</div>
+                <button onclick="document.getElementById('d7').classList.toggle('active')" style="background:none; border:none; color:var(--accent-gold); margin-top:10px; cursor:pointer;">Подробнее</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" style="padding: 50px 20px;">
+        <div class="container">
+            <h2 class="section-title">Записаться в WhatsApp</h2>
+            <select id="sSel" style="width:100%; padding:14px; border-radius:10px; border:1px solid #ccc; font-size:16px;">
+                <option value="Сложное окрашивание">Сложное окрашивание</option>
+                <option value="Стрижка">Стрижка</option>
+                <option value="Уход">Уход</option>
+                <option value="Кератин">Кератин</option>
+                <option value="Ботокс">Ботокс</option>
+                <option value="Причёска">Причёска</option>
+                <option value="Укладка">Укладка</option>
+            </select>
+            <button onclick="sendWa()" class="btn-wa-submit"><i class="fab fa-whatsapp"></i> Отправить заявку в WhatsApp</button>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Салон LANTANA — Мастер Анна</strong></p>
+        <p>📍 г. Сухум, ул. Аиааира, 146</p>
+        <p>🕒 Режим работы: с 09:00 до 18:00</p>
+        <p>📱 WhatsApp: +7 (940) 954-45-65</p>
+    </footer>
+
+    <script>
+        function sendWa() {
+            const service = document.getElementById('sSel').value;
+            const text = `Здравствуйте, Анна! Я хочу к вам записаться на услугу: ${service}. В какое время смогу записаться?`;
+            window.open(`https://wa.me/79409544565?text=${encodeURIComponent(text)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
